@@ -1,0 +1,15 @@
+package kr.com.ezen;
+
+import java.io.InputStream;
+
+public class Mainclass {
+
+	public static void main(String[] args) {
+
+
+		String resource = "org/mybatis/example/mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(resource);
+		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+	}
+
+}

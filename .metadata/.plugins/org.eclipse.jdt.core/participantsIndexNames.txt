@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\java\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3347814146.index
+\mybtisTest\src\main\java
+C:\java\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\351235262.index
+\Springtest\src\test\java
+C:\java\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1823557430.index
+\test\src\main\java
+C:\java\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1287417156.index
+\Springtest\src\main\java
+C:\java\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3855838732.index
+\SampleTest\src\main\java

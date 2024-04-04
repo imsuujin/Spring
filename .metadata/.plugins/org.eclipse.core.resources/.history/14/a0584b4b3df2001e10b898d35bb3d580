@@ -1,0 +1,51 @@
+package kr.com.ezen.persistence;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import kr.com.ezen.dto.MemberVO;
+import kr.com.ezen.mapper.MemberMapper;
+import lombok.extern.log4j.Log4j;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
+@Log4j
+public class MapperTests {
+	@Autowired  //필드주입
+	private MemberMapper memberMapper;
+	@Test
+	public void testGetTime() {
+			log.info("------------------------------------");
+			log.info(memberMapper.getClass().getName());
+			log.info(memberMapper.getTime());
+			log.info("------------------------------------");
+		}
+	@Test
+	public void testInsert() {
+
+//		MemberVO vo = new MemberVO();
+//		vo.setId(10);
+//		vo.setName("유비");
+//		vo.setPhone("010-1111-1111");
+//		vo.setAddress("서울시 장안동");
+//		memberMapper.insertMember(vo);
+		for(int i =0; i<10; i++) {
+		MemberVO vo = new MemberVO.MemberVOBuilder
+				.id(10)
+				.name("관우")
+				.phone("010-0000-1111")
+				.address("서울시 장안구")
+				.build();
+		memberMapper.updateMember(vo);
+	}
+
+}
+}

@@ -1,0 +1,5 @@
+package kr.com.ezen.persistence;
+
+public class DataSourceTests {
+
+}

@@ -1,0 +1,5 @@
+package kr.com.ezen;
+
+public interface MapperInterface {
+
+}

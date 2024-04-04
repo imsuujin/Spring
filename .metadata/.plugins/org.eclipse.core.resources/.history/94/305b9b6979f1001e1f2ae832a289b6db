@@ -1,0 +1,34 @@
+package kr.com.ezen;
+
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+public class Mainclass {
+
+	public static void main(String[] args) {
+
+
+		
+		
+		try {
+		String resource = "kr/com/ezen/mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(resource);
+		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+		
+		System.out.println(sqlSessionFactory);
+
+		SqlSession session = sqlSessionFactory.openSession();
+			//  Blog blog = session.selectOne("org.mybatis.example.BlogMapper.selectBlog", 101);
+			
+		System.out.println("session :"+session);
+		
+		
+		}catch(Exception e) {
+		e.printStackTrace();
+	}
+
+}
+}

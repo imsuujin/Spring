@@ -1,0 +1,6 @@
+package kr.com.ezen.mapper;
+
+public interface MemberMapper {
+	public String getTime();
+
+}

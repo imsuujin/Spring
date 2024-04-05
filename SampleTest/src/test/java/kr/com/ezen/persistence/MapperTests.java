@@ -12,16 +12,15 @@ import kr.com.ezen.dto.MemberVO;
 import kr.com.ezen.mapper.MemberMapper;
 import lombok.extern.log4j.Log4j;
 
-
 //오류이유 어노테이션 순서
 @Log4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 public class MapperTests {
-	
-	@Autowired(required=true)
+
+	@Autowired(required = true)
 	private MemberMapper memberMapper;
-	
+
 	@Test
 	public void testGetTime() {
 		log.info("---------------------------------");
@@ -29,11 +28,11 @@ public class MapperTests {
 		log.info(memberMapper.getTime());
 		log.info("---------------------------------");
 	}
-	//여기까지 mybatis로 db연결하고 crud한다음에 service로 넘어감
-	
+	// 여기까지 mybatis로 db연결하고 crud한다음에 service로 넘어감
+
 //	@Test
 //	public void testInsert() {
-		
+
 //		MemberVO vo = MemberVO.builder()
 //				.id(10)
 //				.name("관우")
@@ -41,7 +40,7 @@ public class MapperTests {
 //				.address("서울시 장안구")
 //				.build();
 //		memberMapper.insertMember(vo);
-		
+
 //		for(int i=0; i<10; i++) {
 //			MemberVO vo = MemberVO.builder()
 //					.id(10+i)
@@ -71,16 +70,16 @@ public class MapperTests {
 	@Test
 	public void testSelectOne() {
 		MemberVO vo = memberMapper.selectOneMember(18);
-		log.info(">>>>>>>>>>>>"+vo);
+		log.info(">>>>>>>>>>>>" + vo);
 	}
-	
+
 	@Test
 	public void testAllList() {
 //		List<MemberVO> list = memberMapper.selectAllList();
 //		for(MemberVo vo : List)
 //			log.info(vo);
-		
-		memberMapper.selectAllList().forEach(vo->log.info(vo));
+
+		memberMapper.selectAllList().forEach(vo -> log.info(vo));
 	}
-	
+
 }
